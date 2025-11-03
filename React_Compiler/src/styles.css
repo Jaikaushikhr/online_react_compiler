@@ -1,0 +1,156 @@
+/* ===== Global Layout ===== */
+body {
+  margin: 0;
+  background: #0e0e10;
+  font-family: "Segoe UI", "Inter", Arial, sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+  padding: 20px;
+  border-right: 2px solid #1e2d3d;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar h3 {
+  margin: 0 0 15px;
+  font-size: 18px;
+  color: #4c9aff;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Files ===== */
+.file {
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.25s ease;
+}
+
+.file:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.file.active {
+  background: #0070f3;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(0, 112, 243, 0.4);
+}
+
+/* ===== Delete Button ===== */
+.delete-btn {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  color: #ff4d4d;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s;
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+  color: #ff7070;
+}
+
+/* ===== Sidebar Buttons ===== */
+.btn {
+  margin-top: 6px;
+  padding: 10px;
+  background: #0070f3;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: #2980ff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 112, 243, 0.4);
+}
+
+/* ===== Editor Area ===== */
+.editor-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #1a1a1d;
+  padding: 10px;
+  overflow: hidden;
+}
+
+/* ===== Run Button ===== */
+.run-btn {
+  align-self: flex-start;
+  margin-bottom: 10px;
+  background: #00c853;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.run-btn:hover {
+  background: #00e676;
+  transform: translateY(-1px);
+}
+
+/* ===== Sandpack Layout ===== */
+.sp-layout {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.sp-code-editor {
+  font-size: 14px !important;
+  background: #121212 !important;
+}
+
+.sp-preview-container {
+  background: #ffffff !important;
+  border-left: 2px solid #1e1e1e;
+}
+
+/* ===== Scrollbar Styling ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
